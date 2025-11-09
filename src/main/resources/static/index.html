@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+<div class="page-bg"></div>
+<div class="page-gradient"></div>
+
+<header class="app-header">
+    <div class="brand">
+        <span class="logo">↔</span>
+        <h1>Unit Converter</h1>
+    </div>
+    <p class="tagline">Convert length, weight, and temperature—fast and pretty ✨</p>
+</header>
+
+<main class="convertForms card">
+    <div class="buttons">
+        <div id="length-button" class="button active">
+            <span class="emoji">📏</span> Length
+        </div>
+        <div id="weight-button" class="button">
+            <span class="emoji">⚖️</span> Weight
+        </div>
+        <div id="temperature-button" class="button">
+            <span class="emoji">🌡️</span> Temperature
+        </div>
+    </div>
+
+    <!-- LENGTH -->
+    <form id="length-form" class="convertForm">
+        <div class="field">
+            <label for="length-value">Enter Length</label>
+            <input type="text" name="value" id="length-value" placeholder="e.g., 12.5" />
+        </div>
+
+        <div class="field two-col">
+            <div>
+                <label for="length-from">From</label>
+                <select name="from" id="length-from">
+                    <option value="">---Select---</option>
+                    <option value="mm">millimeter</option>
+                    <option value="cm">centimeter</option>
+                    <option value="m">meter</option>
+                    <option value="km">kilometer</option>
+                    <option value="in">inch</option>
+                    <option value="ft">foot</option>
+                    <option value="yd">yard</option>
+                    <option value="mi">mile</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="length-to">To</label>
+                <select name="to" id="length-to">
+                    <option value="">---Select---</option>
+                    <option value="mm">millimeter</option>
+                    <option value="cm">centimeter</option>
+                    <option value="m">meter</option>
+                    <option value="km">kilometer</option>
+                    <option value="in">inch</option>
+                    <option value="ft">foot</option>
+                    <option value="yd">yard</option>
+                    <option value="mi">mile</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="submitButton" id="length-submit-button">
+            Convert
+        </button>
+    </form>
+
+    <!-- WEIGHT -->
+    <form id="weight-form" class="convertForm">
+        <div class="field">
+            <label for="weight-value">Enter Weight</label>
+            <input type="text" name="value" id="weight-value" placeholder="e.g., 2.75" />
+        </div>
+
+        <div class="field two-col">
+            <div>
+                <label for="weight-from">From</label>
+                <select name="from" id="weight-from">
+                    <option value="">---Select---</option>
+                    <option value="mg">milligram</option>
+                    <option value="g">gram</option>
+                    <option value="kg">kilogram</option>
+                    <option value="oz">ounce</option>
+                    <option value="lb">pound</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="weight-to">To</label>
+                <select name="to" id="weight-to">
+                    <option value="">---Select---</option>
+                    <option value="mg">milligram</option>
+                    <option value="g">gram</option>
+                    <option value="kg">kilogram</option>
+                    <option value="oz">ounce</option>
+                    <option value="lb">pound</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="submitButton" id="weight-submit-button">
+            Convert
+        </button>
+    </form>
+
+    <!-- TEMPERATURE -->
+    <form id="temperature-form" class="convertForm">
+        <div class="field">
+            <label for="temperature-value">Enter Temperature</label>
+            <input type="text" name="value" id="temperature-value" placeholder="e.g., 98.6" />
+        </div>
+
+        <div class="field two-col">
+            <div>
+                <label for="temperature-from">From</label>
+                <select name="from" id="temperature-from">
+                    <option value="">---Select---</option>
+                    <option value="C">celsius</option>
+                    <option value="F">fahrenheit</option>
+                    <option value="K">kelvin</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="temperature-to">To</label>
+                <select name="to" id="temperature-to">
+                    <option value="">---Select---</option>
+                    <option value="C">celsius</option>
+                    <option value="F">fahrenheit</option>
+                    <option value="K">kelvin</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="submitButton" id="temperature-submit-button">
+            Convert
+        </button>
+    </form>
+</main>
+
+<section id="resultForm" class="result card" hidden></section>
+
+<footer class="footer">
+    <span>Built with Spring Boot · AJAX · Thymeleaf-ready</span>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
